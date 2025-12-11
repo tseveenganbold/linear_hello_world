@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear Hello World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              background: '#08090A', // Extremely dark grey, almost black
+              surface: '#121417',
+              primary: '#5E6AD2',
+              'primary-glow': '#5E6AD280',
+              border: 'rgba(255, 255, 255, 0.08)',
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'shimmer': 'shimmer 2s linear infinite',
+            },
+            keyframes: {
+              shimmer: {
+                from: { backgroundPosition: '0 0' },
+                to: { backgroundPosition: '-200% 0' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #08090A;
+        color: #E2E8F0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* Custom Scrollbar for that premium feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #08090A; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2D3748; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4A5568; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "react": "https://esm.sh/react@^19.2.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.559.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
